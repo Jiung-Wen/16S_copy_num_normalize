@@ -5,6 +5,25 @@ Normalize sequences by 16S rRNA gene copy number (GCN) based on *rrn*DB database
 
 Note that the **mean** column in the ```rrnDB-5.6_pantaxa_stats_NCBI.tsv``` is, according to the [*rrn*DB manual](https://rrndb.umms.med.umich.edu/help/), calculated from the means of the pan-taxa of immediate lower rank. Therefore, the mean of GCN might be different from the *rrn*db online search result. For example, the "mean" of GCN for bacteria is 2.02 in the downloading tsv file, whereas the mean of GCN for all the bacterial taxa is 5.0 if you search *rrn*DB online database.
 
+### Setting path:
+First clone the repository using command below:
+```
+git clone https://github.com/Jiung-Wen/16S_copy_num_normalize.git
+``` 
+
+To set up the path, open ```.bash_profile``` (macOS) or ```.bashrc``` (Linux) with any text editor you prefer:
+```
+vim ~/.bash_profile
+```
+In ```.bash_profile```, append the following command:
+```
+export PATH="/YOUR_PATH/16S_copy_num_normalize/copy_num_normalize/:$PATH"
+```
+Save and close the file. Restart your terminal or using command below to apply the change immediately :
+```
+source ~/.bash_profile
+```
+
 ### Usage:
 
 We assume that you have installed and activated QIIME2 environment.
