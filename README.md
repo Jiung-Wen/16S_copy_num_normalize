@@ -1,6 +1,5 @@
 ## 16S copy number normalization
 
-This script is executable in QIIME2 environment.  
 ### Introduction:
 Normalize sequences by 16S rRNA gene copy number (GCN) based on *rrn*DB database (version 5.6). The script matches the taxa of sequences with the ```rrnDB-5.6_pantaxa_stats_NCBI.tsv``` file, starting from the lowest rank. If a match is found, the mean of GCN for the taxon is assigned; if not, the script will try to match a higher rank until the highest rank is met. All the unassigned sequences are assumed to have one GCN.
 
@@ -8,6 +7,7 @@ Note that the **mean** column in the ```rrnDB-5.6_pantaxa_stats_NCBI.tsv``` is, 
 
 ### Usage:
 
+We assume that you have installed and activated QIIME2 environment.
 ```
 copy_num_normalize.py --table table.qza --taxonomy taxonomy.qza -d silva -o output_file_name
 ```
@@ -15,7 +15,7 @@ copy_num_normalize.py --table table.qza --taxonomy taxonomy.qza -d silva -o outp
 * ```--table``` PATH - path of QIIME2 artifact ```FeatureTable[Frequency]```
 * ```--taxonomy``` PATH - path of QIIME2 artifact ```FeatureData[Taxonomy]``` 
 * ```-d``` STRING - database used for sequence annotation {silva, greengenes}
-* ```-o``` PATH - path of output file
+* ```-o``` PATH - path of output directory and file name (If path is not gave, output files will save to current directory.)
 
 
 ### Running example:
