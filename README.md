@@ -68,7 +68,6 @@ qiime composition ancom \
   --m-metadata-file sample-metadata.tsv \
   --m-metadata-column subject \
   --o-visualization l6-ancom-subject_normalized.qzv
-  
 ```
 
 **ANCOM output visualizations:**
