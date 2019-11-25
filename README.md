@@ -20,7 +20,7 @@ copy_num_normalize.py --table table.qza --taxonomy taxonomy.qza -d silva -o outp
 
 ### Running example:
 
-We use artifacts from QIIME2's "Moving Pictures" tutorial as test files. Use the following commands to download the files. 
+We use artifacts from QIIME2's "[Moving Pictures](https://docs.qiime2.org/2019.10/tutorials/moving-pictures/)" tutorial as test files. Use the following commands to download the files. 
 ```
 # DADA2 output artifact:
 wget https://docs.qiime2.org/2019.10/data/tutorials/moving-pictures/table-dada2.qza
